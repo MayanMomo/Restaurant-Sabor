@@ -1,179 +1,180 @@
-// lang.js
 window.translations = {
-  "en": {
-    "pageTitle": "Restaurante Sabor | Modern Portuguese Cuisine",
-    "navHome": "Home",
-    "navMenu": "Menu",
-    "navAbout": "About Us",
-    "navContact": "Contact",
-    "navReserve": "Book a Table",
-    "heroTitle": "Experience Authentic Portuguese Flavour",
-    "heroSubtitle": "A modern twist on classic cuisine, in the heart of the city.",
-    "heroButton": "Book a Table",
-    "welcomeTitle": "A Taste of Tradition",
-    "welcomeDesc": "Restaurante Sabor is more than a meal; it's an experience. We blend timeless Portuguese recipes with modern culinary techniques, sourcing only the freshest local ingredients. Our passion is to bring you the true taste of Portugal in a warm, inviting atmosphere.",
-    "welcomeButton": "Our Story",
-    "featuredTitle": "Chef's Recommendations",
-    "featuredSubtitle": "A selection of our most beloved dishes",
-    "dish1Title": "Bacalhau à Brás",
-    "dish1Desc": "The timeless classic. Flaked codfish, straw potatoes, onions, and eggs, perfected.",
-    "dish2Title": "Polvo à Lagareiro",
-    "dish2Desc": "Tender grilled octopus, roasted potatoes, and a rich garlic-infused olive oil.",
-    "dish3Title": "Mousse de Chocolate",
-    "dish3Desc": "A rich, decadent chocolate mousse with a hint of sea salt and premium olive oil.",
-    "ctaTitle": "An Unforgettable Dining Experience",
-    "ctaButton": "View Full Menu",
-    "footerDesc": "Modern cuisine inspired by the timeless flavours of Portugal.",
-    "footerNavTitle": "Navigation",
-    "footerHoursTitle": "Opening Hours",
-    "footerHours1": "Tues - Fri: 18:00 - 23:00",
-    "footerHours2": "Sat: 12:00 - 23:30",
-    "footerHours3": "Sun: 12:00 - 22:00",
-    "footerFollowTitle": "Follow Us",
-    "footerCopyright": "&copy; 2025 Restaurante Sabor. All rights reserved.",
-    
-    "menuPageTitle": "Our Menu | Restaurante Sabor",
-    "menuHeaderTitle": "Our Menu",
-    "menuHeaderSubtitle": "Crafted with passion, inspired by the sea and land",
-    "menuAppetizersTitle": "Appetizers (Entradas)",
-    "menuApp1Title": "Caldo Verde",
-    "menuApp1Desc": "Traditional green soup with potato, collard greens, and a slice of chouriço.",
-    "menuApp2Title": "Amêijoas à Bulhão Pato",
-    "menuApp2Desc": "Fresh clams cooked in a white wine, garlic, and cilantro sauce.",
-    "menuApp3Title": "Gambas ao Alho",
-    "menuApp3Desc": "King prawns sautéed in a sizzling garlic, chili, and white wine butter.",
-    "menuMainsTitle": "Main Courses (Pratos Principais)",
-    "menuMain1Title": "Bacalhau à Brás",
-    "menuMain1Desc": "Flaked codfish, straw potatoes, onions, and eggs, perfected.",
-    "menuMain2Title": "Polvo à Lagareiro",
-    "menuMain2Desc": "Tender grilled octopus, roasted potatoes, and a rich garlic-infused olive oil.",
-    "menuMain3Title": "Bife à Portuguesa",
-    "menuMain3Desc": "Pan-seared steak in a garlic sauce, topped with a fried egg and served with chips.",
-    "menuDessertsTitle": "Desserts (Sobremesas)",
-    "menuDessert1Title": "Mousse de Chocolate",
-    "menuDessert1Desc": "A rich, decadent chocolate mousse with a hint of sea salt and premium olive oil.",
-    "menuDessert2Title": "Pastel de Nata",
-    "menuDessert2Desc": "Our house-made custard tart, served warm with cinnamon.",
-    "menuDessert3Title": "Arroz Doce",
-    "menuDessert3Desc": "Traditional creamy rice pudding with a delicate lemon and cinnamon infusion.",
-    
-    "aboutPageTitle": "Our Story | Restaurante Sabor",
-    "aboutHeroTitle": "Our Story",
-    "aboutHeroSubtitle": "A passion for flavour, a dedication to craft",
-    "aboutPhilosophyTitle": "Our Philosophy",
-    "aboutPhilosophyDesc1": "At Restaurante Sabor, our philosophy is simple: food is memory. We believe in honouring the past by using the authentic, bold flavours of Portugal.",
-    "aboutPhilosophyDesc2": "We partner with local farmers, fishermen, and winemakers to ensure every dish is a celebration of the finest ingredients our region has tof offer. From the sea to the table, our commitment is to freshness and quality.",
-    "aboutChefTitle": "Meet Our Chef",
-    "aboutChefName": "Chef Sofia Almeida",
-    "aboutChefRole": "Head Chef & Founder",
-    "aboutChefDesc": "Born in Lisbon and trained in the finest kitchens of Europe, Chef Sofia returns to her roots with Sabor. Her vision is to deconstruct traditional dishes and rebuild them with a refined, modern elegance. Her passion is in every plate.",
-    "aboutCtaTitle": "Join Us for Dinner",
-    "aboutCtaSubtitle": "Experience the passion and craft that defines Restaurante Sabor.",
-    "aboutCtaBtn": "Make a Reservation",
+    en: {
+        // Navigation and General
+        navHome: "Home",
+        navMenu: "Menu",
+        navAbout: "About Us",
+        navContact: "Contact",
+        navReserve: "Book a Table",
+        
+        // Home Page (index.html)
+        homeHeroTitle: "A Taste of Portugal",
+        homeHeroSubtitle: "Authentic flavors, modern presentation. Experience the best dining in Lisbon.",
+        homeFeaturedTitle: "Our Featured Dishes",
+        homeFeaturedSubtitle: "Selected seasonal highlights and classics.",
+        homeDiscover: "Discover Our Menu",
+        homeTestimonialsTitle: "What Our Guests Say",
+        
+        // Menu Page (menu.html)
+        menuPageTitle: "Our Menu | Restaurante Sabor",
+        menuHeroTitle: "A Culinary Journey",
+        menuHeroSubtitle: "Explore our diverse offerings, combining traditional Portuguese ingredients with modern techniques.",
+        menuSectionStarters: "Starters",
+        menuSectionMains: "Main Courses",
+        menuSectionDesserts: "Desserts",
 
-    "contactPageTitle": "Contact & Reservations | Restaurante Sabor",
-    "contactHeroTitle": "Get in Touch",
-    "contactHeroSubtitle": "We look forward to welcoming you.",
-    "contactInfoTitle": "Contact Information",
-    "contactInfoAddressTitle": "Address",
-    "contactInfoPhoneTitle": "Phone",
-    "contactInfoEmailTitle": "Email",
-    "contactInfoHoursTitle": "Hours",
-    "contactReserveTitle": "Make a Reservation",
-    "contactFormName": "Your Name",
-    "contactFormPhone": "Your Phone",
-    "contactFormDate": "Date",
-    "contactFormTime": "Time",
-    "contactFormGuests": "Number of Guests",
-    "contactFormGuestsPlaceholder": "2 guests",
-    "contactFormButton": "Book Your Table"
-  },
-  "pt": {
-    "pageTitle": "Restaurante Sabor | Cozinha Portuguesa Moderna",
-    "navHome": "Início",
-    "navMenu": "Menu",
-    "navAbout": "Sobre Nós",
-    "navContact": "Contacto",
-    "navReserve": "Reservar Mesa",
-    "heroTitle": "Descubra o Sabor Autêntico de Portugal",
-    "heroSubtitle": "Um toque moderno na cozinha clássica, no coração da cidade.",
-    "heroButton": "Reservar Mesa",
-    "welcomeTitle": "Um Sabor de Tradição",
-    "welcomeDesc": "O Restaurante Sabor é mais do que uma refeição; é uma experiência. Fundimos receitas portuguesas intemporais com técnicas culinárias modernas, usando apenas os ingredientes locais mais frescos. A nossa paixão é trazer-lhe o verdadeiro sabor de Portugal num ambiente acolhedor e convidativo.",
-    "welcomeButton": "A Nossa História",
-    "featuredTitle": "Recomendações do Chef",
-    "featuredSubtitle": "Uma seleção dos nossos pratos mais apreciados",
-    "dish1Title": "Bacalhau à Brás",
-    "dish1Desc": "O clássico intemporal. Bacalhau desfiado, batata palha, cebola e ovos, aperfeiçoado.",
-    "dish2Title": "Polvo à Lagareiro",
-    "dish2Desc": "Polvo tenro grelhado, batatas assadas e um rico azeite infundido com alho.",
-    "dish3Title": "Mousse de Chocolate",
-    "dish3Desc": "Uma mousse de chocolate rica e decadente com um toque de flor de sal e azeite premium.",
-    "ctaTitle": "Uma Experiência Gastronómica Inesquecível",
-    "ctaButton": "Ver Menu Completo",
-    "footerDesc": "Cozinha moderna inspirada nos sabores intemporais de Portugal.",
-    "footerNavTitle": "Navegação",
-    "footerHoursTitle": "Horário",
-    "footerHours1": "Ter - Sex: 18:00 - 23:00",
-    "footerHours2": "Sáb: 12:00 - 23:30",
-    "footerHours3": "Dom: 12:00 - 22:00",
-    "footerFollowTitle": "Siga-nos",
-    "footerCopyright": "&copy; 2025 Restaurante Sabor. Todos os direitos reservados.",
+        // Contact Page (contact.html)
+        contactPageTitle: "Contact & Reservations | Restaurante Sabor",
+        contactHeroTitle: "Get in Touch",
+        contactHeroSubtitle: "We look forward to welcoming you.",
+        contactInfoTitle: "Contact Information",
+        contactInfoAddressTitle: "Address",
+        contactInfoPhoneTitle: "Phone",
+        contactInfoEmailTitle: "Email",
+        contactInfoHoursTitle: "Hours",
+        contactReserveTitle: "Make a Reservation",
+        contactFormName: "Your Name",
+        contactFormPhone: "Your Phone",
+        contactFormDate: "Date",
+        contactFormTime: "Time",
+        contactFormGuests: "Number of Guests",
+        contactFormButton: "Book Your Table",
 
-    "menuPageTitle": "O Nosso Menu | Restaurante Sabor",
-    "menuHeaderTitle": "O Nosso Menu",
-    "menuHeaderSubtitle": "Criado com paixão, inspirado no mar e na terra",
-    "menuAppetizersTitle": "Entradas",
-    "menuApp1Title": "Caldo Verde",
-    "menuApp1Desc": "Sopa tradicional de batata e couve-galega, com uma rodela de chouriço.",
-    "menuApp2Title": "Amêijoas à Bulhão Pato",
-    "menuApp2Desc": "Amêijoas frescas cozinhadas em molho de vinho branco, alho e coentros.",
-    "menuApp3Title": "Gambas ao Alho",
-    "menuApp3Desc": "Gambas salteadas em manteiga de alho, malagueta e vinho branco.",
-    "menuMainsTitle": "Pratos Principais",
-    "menuMain1Title": "Bacalhau à Brás",
-    "menuMain1Desc": "Bacalhau desfiado, batata palha, cebola e ovos, aperfeiçoado.",
-    "menuMain2Title": "Polvo à Lagareiro",
-    "menuMain2Desc": "Polvo tenro grelhado, batatas assadas e um rico azeite infundido com alho.",
-    "menuMain3Title": "Bife à Portuguesa",
-    "menuMain3Desc": "Bife frito em molho de alho, coberto com ovo estrelado e servido com batata frita.",
-    "menuDessertsTitle": "Sobremesas",
-    "menuDessert1Title": "Mousse de Chocolate",
-    "menuDessert1Desc": "Uma mousse de chocolate rica e decadente com um toque de flor de sal e azeite premium.",
-    "menuDessert2Title": "Pastel de Nata",
-    "menuDessert2Desc": "O nosso pastel de nata caseiro, servido quente com canela.",
-    "menuDessert3Title": "Arroz Doce",
-    "menuDessert3Desc": "Arroz doce cremoso tradicional com uma delicada infusão de limão e canela.",
+        // Footer
+        footerDesc: "Modern cuisine inspired by the timeless flavours of Portugal.",
+        footerNavTitle: "Navigation",
+        footerHoursTitle: "Opening Hours",
+        footerHours1: "Tues - Fri: 18:00 - 23:00",
+        footerHours2: "Sat: 12:00 - 23:30",
+        footerHours3: "Sun: 12:00 - 22:00",
+        footerFollowTitle: "Follow Us",
+        footerCopyright: "© 2025 Restaurante Sabor. All rights reserved.",
 
-    "aboutPageTitle": "A Nossa História | Restaurante Sabor",
-    "aboutHeroTitle": "A Nossa História",
-    "aboutHeroSubtitle": "Uma paixão pelo sabor, uma dedicação à arte",
-    "aboutPhilosophyTitle": "A Nossa Filosofia",
-    "aboutPhilosophyDesc1": "No Restaurante Sabor, a nossa filosofia é simples: comida é memória. Acreditamos em honrar o passado usando os sabores autênticos e arrojados de Portugal.",
-    "aboutPhilosophyDesc2": "Temos parcerias com agricultores, pescadores e produtores de vinho locais para garantir que cada prato é uma celebração dos melhores ingredientes que a nossa região tem para oferecer. Do mar à mesa, o nosso compromisso é com o frescor e a qualidade.",
-    "aboutChefTitle": "Conheça a Nossa Chef",
-    "aboutChefName": "Chef Sofia Almeida",
-    "aboutChefRole": "Chef Executiva & Fundadora",
-    "aboutChefDesc": "Nascida em Lisboa e formada nas melhores cozinhas da Europa, a Chef Sofia regressa às suas raízes com o Sabor. A sua visão é desconstruir pratos tradicionais e reconstruí-los com uma elegância moderna e refinada. A sua paixão está em cada prato.",
-    "aboutCtaTitle": "Junte-se a Nós para Jantar",
-    "aboutCtaSubtitle": "Experimente a paixão e a arte que definem o Restaurante Sabor.",
-    "aboutCtaBtn": "Fazer uma Reserva",
+        // --- Dish Translations (NEWLY ADDED) ---
 
-    "contactPageTitle": "Contacto & Reservas | Restaurante Sabor",
-    "contactHeroTitle": "Entre em Contacto",
-    "contactHeroSubtitle": "Estamos ansiosos por lhe dar as boas-vindas.",
-    "contactInfoTitle": "Informações de Contacto",
-    "contactInfoAddressTitle": "Morada",
-    "contactInfoPhoneTitle": "Telefone",
-    "contactInfoEmailTitle": "Email",
-    "contactInfoHoursTitle": "Horário",
-    "contactReserveTitle": "Faça uma Reserva",
-    "contactFormName": "O Seu Nome",
-    "contactFormPhone": "O Seu Telefone",
-    "contactFormDate": "Data",
-    "contactFormTime": "Hora",
-    "contactFormGuests": "Número de Pessoas",
-    "contactFormGuestsPlaceholder": "2 pessoas",
-    "contactFormButton": "Reservar Mesa"
-  }
+        // Dish 1 (Soup)
+        dishSoupTitle: "Soup of the Day",
+        dishSoupDesc: "Freshly prepared daily with seasonal ingredients from the local market.",
+        
+        // Dish 2 (Salad)
+        dishSaladTitle: "Seasonal Garden Salad",
+        dishSaladDesc: "Mixed greens, toasted nuts, goat cheese, and a honey-mustard vinaigrette.",
+
+        // Dish 3 (Cod)
+        dishCodTitle: "Bacalhau à Brás",
+        dishCodDesc: "Shredded codfish, onions, and thinly chopped fried potatoes, all bound with scrambled eggs.",
+
+        // Dish 4 (Salmon)
+        dishSalmonTitle: "Grilled Salmon Filet",
+        dishSalmonDesc: "Perfectly grilled salmon served with asparagus and lemon butter sauce.",
+
+        // Dish 5 (Steak)
+        dishSteakTitle: "Portuguese Steak",
+        dishSteakDesc: "Tender sirloin steak with a creamy port wine sauce and potato crisps.",
+
+        // Dish 6 (Mushroom Risotto)
+        dishRisottoTitle: "Mushroom Risotto",
+        dishRisottoDesc: "Creamy Arborio rice with wild mushrooms, truffle oil, and Parmesan cheese.",
+
+        // Dish 7 (Natas - Native specialty, name kept)
+        dishNataTitle: "Pastel de Nata",
+        dishNataDesc: "The classic Portuguese custard tart, served warm with cinnamon.",
+
+        // Dish 8 (Mousse - Native specialty, name kept)
+        dishMousseTitle: "Mousse au Chocolat",
+        dishMousseDesc: "Rich, dark chocolate mousse, light and intensely flavored.",
+
+        // Dish 9 (Cheesecake)
+        dishCheesecakeTitle: "Seasonal Cheesecake",
+        dishCheesecakeDesc: "Creamy cheesecake with a digestive biscuit base and seasonal fruit topping."
+    },
+    pt: {
+        // Navigation and General
+        navHome: "Início",
+        navMenu: "Menu",
+        navAbout: "Sobre Nós",
+        navContact: "Contacto",
+        navReserve: "Reservar Mesa",
+
+        // Home Page (index.html)
+        homeHeroTitle: "O Sabor de Portugal",
+        homeHeroSubtitle: "Sabores autênticos, apresentação moderna. Viva a melhor experiência gastronómica em Lisboa.",
+        homeFeaturedTitle: "Os Nossos Pratos em Destaque",
+        homeFeaturedSubtitle: "Seleção de clássicos e destaques sazonais.",
+        homeDiscover: "Descubra o Nosso Menu",
+        homeTestimonialsTitle: "O Que Dizem os Nossos Clientes",
+
+        // Menu Page (menu.html)
+        menuPageTitle: "O Nosso Menu | Restaurante Sabor",
+        menuHeroTitle: "Uma Jornada Culinária",
+        menuHeroSubtitle: "Explore a nossa oferta diversificada, combinando ingredientes tradicionais portugueses com técnicas modernas.",
+        menuSectionStarters: "Entradas",
+        menuSectionMains: "Pratos Principais",
+        menuSectionDesserts: "Sobremesas",
+
+        // Contact Page (contact.html)
+        contactPageTitle: "Contacto e Reservas | Restaurante Sabor",
+        contactHeroTitle: "Fale Connosco",
+        contactHeroSubtitle: "Aguardamos o seu contacto.",
+        contactInfoTitle: "Informação de Contacto",
+        contactInfoAddressTitle: "Morada",
+        contactInfoPhoneTitle: "Telefone",
+        contactInfoEmailTitle: "Email",
+        contactInfoHoursTitle: "Horário",
+        contactReserveTitle: "Faça a Sua Reserva",
+        contactFormName: "O Seu Nome",
+        contactFormPhone: "O Seu Telefone",
+        contactFormDate: "Data",
+        contactFormTime: "Hora",
+        contactFormGuests: "Número de Pessoas",
+        contactFormButton: "Reservar a Sua Mesa",
+
+        // Footer
+        footerDesc: "Cozinha moderna inspirada nos sabores intemporais de Portugal.",
+        footerNavTitle: "Navegação",
+        footerHoursTitle: "Horário de Funcionamento",
+        footerHours1: "Ter - Sex: 18:00 - 23:00",
+        footerHours2: "Sáb: 12:00 - 23:30",
+        footerHours3: "Dom: 12:00 - 22:00",
+        footerFollowTitle: "Siga-nos",
+        footerCopyright: "© 2025 Restaurante Sabor. Todos os direitos reservados.",
+
+        // --- Dish Translations (NEWLY ADDED) ---
+
+        // Dish 1 (Soup)
+        dishSoupTitle: "Sopa do Dia",
+        dishSoupDesc: "Preparada diariamente com ingredientes frescos e sazonais do mercado local.",
+
+        // Dish 2 (Salad)
+        dishSaladTitle: "Salada de Jardim Sazonal",
+        dishSaladDesc: "Mix de folhas verdes, nozes torradas, queijo de cabra e vinagrete de mel e mostarda.",
+
+        // Dish 3 (Cod)
+        dishCodTitle: "Bacalhau à Brás", // Kept native name
+        dishCodDesc: "Bacalhau desfiado, cebola e batata palha, tudo ligado com ovos mexidos.",
+
+        // Dish 4 (Salmon)
+        dishSalmonTitle: "Filete de Salmão Grelhado",
+        dishSalmonDesc: "Salmão perfeitamente grelhado, servido com espargos e molho de manteiga de limão.",
+
+        // Dish 5 (Steak)
+        dishSteakTitle: "Bife à Portuguesa",
+        dishSteakDesc: "Bife de lombo tenro com molho cremoso de vinho do Porto e batata frita caseira.",
+
+        // Dish 6 (Mushroom Risotto)
+        dishRisottoTitle: "Risotto de Cogumelos",
+        dishRisottoDesc: "Arroz Arborio cremoso com cogumelos selvagens, azeite trufado e queijo Parmesão.",
+
+        // Dish 7 (Natas - Native specialty, name kept)
+        dishNataTitle: "Pastel de Nata", // Kept native name
+        dishNataDesc: "O clássico bolo de custard português, servido quente com canela.",
+
+        // Dish 8 (Mousse - Native specialty, name kept)
+        dishMousseTitle: "Mousse au Chocolat", // Kept native name
+        dishMousseDesc: "Mousse de chocolate preto rica, leve e intensamente saborosa.",
+
+        // Dish 9 (Cheesecake)
+        dishCheesecakeTitle: "Cheesecake Sazonal",
+        dishCheesecakeDesc: "Cheesecake cremoso com base de bolacha e cobertura de frutos sazonais."
+    }
 };
