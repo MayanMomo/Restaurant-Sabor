@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title data-i18n="pageTitle">Restaurante Sabor | Modern Portuguese Cuisine</title>
+    <title data-i18n="navHome">Home | Restaurante Sabor</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -13,16 +13,16 @@
         
         body {
             font-family: 'Poppins', sans-serif;
-            background-color: #fdfaf6; /* Soft beige background */
+            background-color: #fdfaf6;
             color: #333;
         }
         
         .playfair {
             font-family: 'Playfair Display', serif;
         }
-
-        .hero-section {
-            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.pexels.com/photos/262978/pexels-photo-262978.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+        
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://images.pexels.com/photos/10398642/pexels-photo-10398642.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
             background-size: cover;
             background-position: center;
         }
@@ -34,15 +34,11 @@
         .btn-primary {
             @apply bg-[#d1a150] text-white font-semibold py-3 px-8 rounded-lg transition-all hover:bg-[#b88f48] shadow-md hover:shadow-lg;
         }
-        
-        .btn-secondary {
-            @apply bg-transparent border-2 border-[#d1a150] text-[#d1a150] font-semibold py-3 px-8 rounded-lg transition-all hover:bg-[#d1a150] hover:text-white;
-        }
 
         .nav-link {
             @apply text-gray-700 hover:text-[#d1a150] transition-all;
         }
-
+        
         .nav-link-active {
             @apply text-[#d1a150] font-semibold;
         }
@@ -70,7 +66,7 @@
 </head>
 <body class="antialiased">
 
-    <!-- Navegação -->
+    <!-- Navigation -->
     <nav class="bg-white shadow-md sticky top-0 z-50">
         <div class="container mx-auto px-6 py-4">
             <div class="flex justify-between items-center">
@@ -82,7 +78,7 @@
                     <a href="about.html" class="nav-link" data-i18n="navAbout">About Us</a>
                     <a href="contact.html" class="nav-link" data-i18n="navContact">Contact</a>
                     
-                    <!-- Language Switcher -->
+                    <!-- Language Switchers -->
                     <div class="flex items-center space-x-3 pl-4">
                         <button id="lang-en" class="lang-switcher" data-lang="en">
                             <img src="https://flagcdn.com/gb.svg" alt="English" class="w-6 h-auto rounded-sm">
@@ -103,77 +99,106 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero-section h-screen -mt-16 pt-16 flex items-center justify-center text-white">
-        <div class="container mx-auto px-6 text-center" data-aos="fade-up">
-            <h1 class="playfair text-5xl md:text-7xl font-bold mb-6" data-i18n="heroTitle">Experience Authentic Portuguese Flavour</h1>
-            <p class="text-xl md:text-2xl mb-10 max-w-3xl mx-auto" data-i18n="heroSubtitle">A modern twist on classic cuisine, in the heart of the city.</p>
-            <a href="contact.html" class="btn-primary" data-i18n="heroButton">Book a Table</a>
+    <section class="hero h-[80vh] flex items-center justify-center text-white">
+        <div class="container mx-auto px-6 text-center" data-aos="zoom-in">
+            <p class="playfair text-xl md:text-2xl italic mb-4">Bem-vindo ao Sabor</p>
+            <h1 class="playfair text-6xl md:text-8xl font-bold mb-6" data-i18n="homeHeroTitle">A Taste of Portugal</h1>
+            <p class="text-lg md:text-xl mb-10 max-w-3xl mx-auto" data-i18n="homeHeroSubtitle">Authentic flavors, modern presentation. Experience the best dining in Lisbon.</p>
+            <a href="contact.html" class="btn-primary" data-i18n="navReserve">Book a Table</a>
         </div>
     </section>
 
-    <!-- Welcome Section -->
-    <section class="py-24 bg-white">
-        <div class="container mx-auto px-6">
-            <div class="flex flex-col md:flex-row items-center gap-12">
-                <div class="md:w-1/2" data-aos="fade-right">
-                    <img src="https://images.pexels.com/photos/262047/pexels-photo-262047.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Warm interior of Restaurante Sabor" class="rounded-lg shadow-2xl w-full h-full object-cover">
-                </div>
-                <div class="md:w-1/2" data-aos="fade-left">
-                    <h2 class="playfair text-4xl md:text-5xl font-bold text-gray-800 mb-6" data-i18n="welcomeTitle">A Taste of Tradition</h2>
-                    <p class="text-gray-600 mb-8 text-lg" data-i18n="welcomeDesc">Restaurante Sabor is more than a meal; it's an experience. We blend timeless Portuguese recipes with modern culinary techniques, sourcing only the freshest local ingredients. Our passion is to bring you the true taste of Portugal in a warm, inviting atmosphere.</p>
-                    <a href="about.html" class="btn-secondary" data-i18n="welcomeButton">Our Story</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Featured Dishes -->
+    <!-- Featured Dishes Section -->
     <section class="py-24 bg-[#fdfaf6]">
         <div class="container mx-auto px-6">
             <div class="text-center mb-16" data-aos="fade-up">
-                <h2 class="playfair text-4xl md:text-5xl font-bold text-gray-800 mb-4" data-i18n="featuredTitle">Chef's Recommendations</h2>
-                <p class="text-lg text-gray-600 max-w-xl mx-auto" data-i18n="featuredSubtitle">A selection of our most beloved dishes</p>
-                <div class="w-24 h-1 bg-[#d1a150] mx-auto mt-4"></div>
+                <h2 class="playfair text-5xl font-bold text-gray-800" data-i18n="homeFeaturedTitle">Our Featured Dishes</h2>
+                <p class="text-gray-500 text-lg mt-3" data-i18n="homeFeaturedSubtitle">Selected seasonal highlights and classics.</p>
             </div>
             
             <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
-                <!-- Dish 1 -->
-                <div class="bg-white rounded-lg overflow-hidden shadow-lg transition-all hover:shadow-2xl" data-aos="fade-up" data-aos-delay="100">
-                    <img src="https://images.pexels.com/photos/10153208/pexels-photo-10153208.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Bacalhau à Brás" class="w-full h-64 object-cover">
+                <!-- Featured Dish 1: Bacalhau à Brás (Native name kept) -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden transition-all hover:shadow-2xl" data-aos="fade-up" data-aos-delay="100">
+                    <img src="https://images.pexels.com/photos/10398642/pexels-photo-10398642.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Bacalhau à Brás" class="w-full h-48 object-cover">
                     <div class="p-6">
-                        <h3 class="playfair text-2xl font-bold text-gray-800 mb-2" data-i18n="dish1Title">Bacalhau à Brás</h3>
-                        <p class="text-gray-600 mb-4" data-i18n="dish1Desc">The timeless classic. Flaked codfish, straw potatoes, onions, and eggs, perfected.</p>
+                        <h3 class="playfair text-2xl font-semibold mb-2 text-gray-800" data-i18n="dishCodTitle">Bacalhau à Brás</h3>
+                        <p class="text-gray-600 mb-4 text-sm" data-i18n="dishCodDesc">Shredded codfish, onions, and thinly chopped fried potatoes, all bound with scrambled eggs.</p>
+                        <span class="text-lg font-bold text-[#d1a150]">€24</span>
                     </div>
                 </div>
-                <!-- Dish 2 -->
-                <div class="bg-white rounded-lg overflow-hidden shadow-lg transition-all hover:shadow-2xl" data-aos="fade-up" data-aos-delay="200">
-                    <img src="https://images.pexels.com/photos/5930262/pexels-photo-5930262.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Polvo à Lagareiro" class="w-full h-64 object-cover">
+                
+                <!-- Featured Dish 2: Grilled Salmon (TRANSLATABLE) -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden transition-all hover:shadow-2xl" data-aos="fade-up" data-aos-delay="200">
+                    <img src="https://images.pexels.com/photos/1267693/pexels-photo-1267693.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Grilled Salmon Filet" class="w-full h-48 object-cover">
                     <div class="p-6">
-                        <h3 class="playfair text-2xl font-bold text-gray-800 mb-2" data-i18n="dish2Title">Polvo à Lagareiro</h3>
-                        <p class="text-gray-600 mb-4" data-i18n="dish2Desc">Tender grilled octopus, roasted potatoes, and a rich garlic-infused olive oil.</p>
+                        <h3 class="playfair text-2xl font-semibold mb-2 text-gray-800" data-i18n="dishSalmonTitle">Grilled Salmon Filet</h3>
+                        <p class="text-gray-600 mb-4 text-sm" data-i18n="dishSalmonDesc">Perfectly grilled salmon served with asparagus and lemon butter sauce.</p>
+                        <span class="text-lg font-bold text-[#d1a150]">€22</span>
                     </div>
                 </div>
-                <!-- Dish 3 -->
-                <div class="bg-white rounded-lg overflow-hidden shadow-lg transition-all hover:shadow-2xl" data-aos="fade-up" data-aos-delay="300">
-                    <img src="https://images.pexels.com/photos/4109913/pexels-photo-4109913.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Mousse de Chocolate" class="w-full h-64 object-cover">
+
+                <!-- Featured Dish 3: Pastel de Nata (Native name kept) -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden transition-all hover:shadow-2xl" data-aos="fade-up" data-aos-delay="300">
+                    <img src="https://images.pexels.com/photos/13593026/pexels-photo-13593026.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Pastel de Nata" class="w-full h-48 object-cover">
                     <div class="p-6">
-                        <h3 class="playfair text-2xl font-bold text-gray-800 mb-2" data-i18n="dish3Title">Mousse de Chocolate</h3>
-                        <p class="text-gray-600 mb-4" data-i18n="dish3Desc">A rich, decadent chocolate mousse with a hint of sea salt and premium olive oil.</p>
+                        <h3 class="playfair text-2xl font-semibold mb-2 text-gray-800" data-i18n="dishNataTitle">Pastel de Nata</h3>
+                        <p class="text-gray-600 mb-4 text-sm" data-i18n="dishNataDesc">The classic Portuguese custard tart, served warm with cinnamon.</p>
+                        <span class="text-lg font-bold text-[#d1a150]">€5</span>
                     </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-16" data-aos="fade-up">
+                <a href="menu.html" class="btn-primary" data-i18n="homeDiscover">Discover Our Menu</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-24 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="playfair text-5xl font-bold text-gray-800" data-i18n="homeTestimonialsTitle">What Our Guests Say</h2>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                <!-- Testimonial 1 -->
+                <div class="bg-white p-8 rounded-xl shadow-lg" data-aos="fade-up" data-aos-delay="100">
+                    <i data-feather="star" class="text-[#d1a150] fill-[#d1a150] w-6 h-6 mb-4 inline-block"></i>
+                    <i data-feather="star" class="text-[#d1a150] fill-[#d1a150] w-6 h-6 mb-4 inline-block"></i>
+                    <i data-feather="star" class="text-[#d1a150] fill-[#d1a150] w-6 h-6 mb-4 inline-block"></i>
+                    <i data-feather="star" class="text-[#d1a150] fill-[#d1a150] w-6 h-6 mb-4 inline-block"></i>
+                    <i data-feather="star" class="text-[#d1a150] fill-[#d1a150] w-6 h-6 mb-4 inline-block"></i>
+                    <p class="text-gray-700 italic mb-6">"The Bacalhau à Brás was the best I've ever had. Authentic and incredibly flavorful. The service was impeccable and the atmosphere perfect for a romantic dinner."</p>
+                    <p class="font-semibold text-gray-800">- Clara M.</p>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="bg-white p-8 rounded-xl shadow-lg" data-aos="fade-up" data-aos-delay="200">
+                    <i data-feather="star" class="text-[#d1a150] fill-[#d1a150] w-6 h-6 mb-4 inline-block"></i>
+                    <i data-feather="star" class="text-[#d1a150] fill-[#d1a150] w-6 h-6 mb-4 inline-block"></i>
+                    <i data-feather="star" class="text-[#d1a150] fill-[#d1a150] w-6 h-6 mb-4 inline-block"></i>
+                    <i data-feather="star" class="text-[#d1a150] fill-[#d1a150] w-6 h-6 mb-4 inline-block"></i>
+                    <i data-feather="star" class="text-[#d1a150] w-6 h-6 mb-4 inline-block"></i>
+                    <p class="text-gray-700 italic mb-6">"A hidden gem in Lisbon! The wine list is exceptional, and the Grilled Salmon was cooked to perfection. Highly recommend the Pastel de Nata to finish."</p>
+                    <p class="font-semibold text-gray-800">- David S.</p>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="bg-white p-8 rounded-xl shadow-lg" data-aos="fade-up" data-aos-delay="300">
+                    <i data-feather="star" class="text-[#d1a150] fill-[#d1a150] w-6 h-6 mb-4 inline-block"></i>
+                    <i data-feather="star" class="text-[#d1a150] fill-[#d1a150] w-6 h-6 mb-4 inline-block"></i>
+                    <i data-feather="star" class="text-[#d1a150] fill-[#d1a150] w-6 h-6 mb-4 inline-block"></i>
+                    <i data-feather="star" class="text-[#d1a150] fill-[#d1a150] w-6 h-6 mb-4 inline-block"></i>
+                    <i data-feather="star" class="text-[#d1a150] fill-[#d1a150] w-6 h-6 mb-4 inline-block"></i>
+                    <p class="text-gray-700 italic mb-6">"My group loved the Mushroom Risotto and the desserts. The staff handled our large reservation efficiently and professionally. We will definitely be back."</p>
+                    <p class="font-semibold text-gray-800">- Sofia P.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- CTA -->
-    <section class="py-24 bg-gray-800 text-white">
-        <div class="container mx-auto px-6 text-center" data-aos="fade-up">
-            <h2 class="playfair text-4xl md:text-5xl font-bold mb-8" data-i18n="ctaTitle">An Unforgettable Dining Experience</h2>
-            <a href="menu.html" class="btn-primary" data-i18n="ctaButton">View Full Menu</a>
-        </div>
-    </section>
-
-    <!-- Rodapé -->
+    <!-- Footer Section -->
     <footer class="bg-gray-900 text-white py-16">
         <div class="container mx-auto px-6">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
@@ -219,9 +244,8 @@
         </div>
     </footer>
 
-    <!-- Load translation dictionary first -->
+    <!-- Scripts -->
     <script src="lang.js"></script>
-
     <script>
         AOS.init({
             duration: 800,
@@ -237,30 +261,27 @@
         });
 
         // --- Language Switcher Logic ---
-        
         const getLanguage = () => {
             let lang = localStorage.getItem('lang');
             if (!lang) {
-                lang = 'en'; // Default to English
+                lang = 'en';
                 localStorage.setItem('lang', lang);
             }
             return lang;
         };
 
-        // Pass translations object as an argument
-        const setLanguage = (lang, translations) => {
+        const setLanguage = (lang) => {
             localStorage.setItem('lang', lang);
-            translatePage(lang, translations);
+            translatePage(lang);
             updateSwitcherUI(lang);
         };
 
-        // Pass translations object as an argument
-        const translatePage = (lang, translations) => {
-            // Check if translations object itself is valid
-            if (!translations || !translations[lang]) {
+        const translatePage = (lang) => {
+            if (typeof window.translations === 'undefined' || !window.translations[lang]) {
                 console.error(`Translations for language "${lang}" not found or translations object is missing.`);
                 return;
             }
+            const translations = window.translations;
 
             document.querySelectorAll('[data-i18n]').forEach(element => {
                 const key = element.getAttribute('data-i18n');
@@ -268,7 +289,15 @@
                     element.innerHTML = translations[lang][key];
                 }
             });
-            // Update page title
+            
+            // Handle placeholders specifically as innerHTML won't work for them
+            document.querySelectorAll('[placeholder]').forEach(element => {
+                const placeholderKey = element.getAttribute('data-i18n-placeholder');
+                if (placeholderKey && translations[lang][placeholderKey]) {
+                    element.placeholder = translations[lang][placeholderKey];
+                }
+            });
+
             const titleElement = document.querySelector('title[data-i18n]');
             if (titleElement) {
                 const titleKey = titleElement.getAttribute('data-i18n');
@@ -290,24 +319,20 @@
         };
 
         document.addEventListener('DOMContentLoaded', () => {
-            // Check if lang.js was loaded correctly
             if (typeof window.translations === 'undefined') {
                 console.error('CRITICAL: lang.js file not found or failed to load. Translations will not work.');
-                return; // Stop execution if translations are missing
+                return;
             }
 
-            // Assign translations *after* DOM is loaded and lang.js is presumably parsed
-            const translations = window.translations;
             const currentLang = getLanguage();
-            
-            translatePage(currentLang, translations);
+            translatePage(currentLang);
             updateSwitcherUI(currentLang);
 
-            // Pass translations to the click handlers
-            document.getElementById('lang-en').addEventListener('click', () => setLanguage('en', translations));
-            document.getElementById('lang-pt').addEventListener('click', () => setLanguage('pt', translations));
+            document.getElementById('lang-en').addEventListener('click', () => setLanguage('en'));
+            document.getElementById('lang-pt').addEventListener('click', () => setLanguage('pt'));
         });
     </script>
 </body>
 </html>
+
 
