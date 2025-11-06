@@ -20,7 +20,13 @@
         .playfair {
             font-family: 'Playfair Display', serif;
         }
-
+        
+        .menu-hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://images.pexels.com/photos/10398642/pexels-photo-10398642.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+            background-size: cover;
+            background-position: center;
+        }
+        
         .transition-all {
             transition: all 0.3s ease-in-out;
         }
@@ -32,7 +38,7 @@
         .nav-link {
             @apply text-gray-700 hover:text-[#d1a150] transition-all;
         }
-
+        
         .nav-link-active {
             @apply text-[#d1a150] font-semibold;
         }
@@ -56,23 +62,11 @@
         .lang-switcher:hover {
             opacity: 1;
         }
-
-        .menu-card {
-            @apply bg-white rounded-lg overflow-hidden shadow-lg transition-all hover:shadow-2xl;
-        }
-
-        .menu-card img {
-            @apply w-full h-64 object-cover;
-        }
-
-        .menu-card-content {
-            @apply p-6;
-        }
     </style>
 </head>
 <body class="antialiased">
 
-    <!-- Navegação -->
+    <!-- Navigation -->
     <nav class="bg-white shadow-md sticky top-0 z-50">
         <div class="container mx-auto px-6 py-4">
             <div class="flex justify-between items-center">
@@ -84,7 +78,7 @@
                     <a href="about.html" class="nav-link" data-i18n="navAbout">About Us</a>
                     <a href="contact.html" class="nav-link" data-i18n="navContact">Contact</a>
                     
-                    <!-- Language Switcher -->
+                    <!-- Language Switchers -->
                     <div class="flex items-center space-x-3 pl-4">
                         <button id="lang-en" class="lang-switcher" data-lang="en">
                             <img src="https://flagcdn.com/gb.svg" alt="English" class="w-6 h-auto rounded-sm">
@@ -104,126 +98,125 @@
         </div>
     </nav>
 
-    <!-- Menu Header -->
-    <section class="py-24 bg-gray-800 text-white" data-aos="fade-down">
-        <div class="container mx-auto px-6 text-center">
-            <h1 class="playfair text-5xl md:text-6xl font-bold mb-4" data-i18n="menuHeaderTitle">Our Menu</h1>
-            <p class="text-xl max-w-2xl mx-auto" data-i18n="menuHeaderSubtitle">Crafted with passion, inspired by the sea and land</p>
+    <!-- Hero Section -->
+    <section class="menu-hero h-96 flex items-center justify-center text-white">
+        <div class="container mx-auto px-6 text-center" data-aos="fade-up">
+            <h1 class="playfair text-5xl md:text-6xl font-bold mb-6" data-i18n="menuHeroTitle">A Culinary Journey</h1>
+            <p class="text-xl md:text-2xl max-w-2xl mx-auto" data-i18n="menuHeroSubtitle">Explore our diverse offerings, combining traditional Portuguese ingredients with modern techniques.</p>
         </div>
     </section>
 
-    <!-- Appetizers Section -->
-    <section class="py-20">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16" data-aos="fade-up">
-                <h2 class="playfair text-4xl font-bold text-gray-800 mb-2" data-i18n="menuAppetizersTitle">Appetizers (Entradas)</h2>
-                <div class="w-20 h-1 bg-[#d1a150] mx-auto"></div>
-            </div>
+    <!-- Menu Section -->
+    <section class="py-24 bg-[#fdfaf6]">
+        <div class="container mx-auto px-6 max-w-5xl">
             
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
-                <div class="menu-card" data-aos="fade-up" data-aos-delay="100">
-                    <img src="https://images.pexels.com/photos/128421/pexels-photo-128421.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Caldo Verde">
-                    <div class="menu-card-content">
-                        <h3 class="playfair text-2xl font-bold text-gray-800 mb-2" data-i18n="menuApp1Title">Caldo Verde</h3>
-                        <p class="text-gray-600 mb-4" data-i18n="menuApp1Desc">Traditional green soup with potato, collard greens, and a slice of chouriço.</p>
-                        <span class="font-bold text-lg text-gray-800">€7.50</span>
+            <!-- Starters Section -->
+            <div class="mb-16" data-aos="fade-up">
+                <h2 class="playfair text-4xl font-bold text-[#d1a150] mb-10 text-center border-b-2 border-gray-200 pb-4" data-i18n="menuSectionStarters">Starters</h2>
+                
+                <div class="space-y-10">
+                    <!-- Dish 1: Soup of the Day (TRANSLATABLE) -->
+                    <div class="flex justify-between items-start border-b border-gray-100 pb-4">
+                        <div>
+                            <h3 class="playfair text-xl font-semibold text-gray-800" data-i18n="dishSoupTitle">Soup of the Day</h3>
+                            <p class="text-gray-500 max-w-lg" data-i18n="dishSoupDesc">Freshly prepared daily with seasonal ingredients from the local market.</p>
+                        </div>
+                        <span class="text-xl font-bold text-[#d1a150] ml-4">€8</span>
                     </div>
-                </div>
-                <div class="menu-card" data-aos="fade-up" data-aos-delay="200">
-                    <img src="https://images.pexels.com/photos/5929381/pexels-photo-5929381.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Amêijoas à Bulhão Pato">
-                    <div class="menu-card-content">
-                        <h3 class="playfair text-2xl font-bold text-gray-800 mb-2" data-i18n="menuApp2Title">Amêijoas à Bulhão Pato</h3>
-                        <p class="text-gray-600 mb-4" data-i18n="menuApp2Desc">Fresh clams cooked in a white wine, garlic, and cilantro sauce.</p>
-                        <span class="font-bold text-lg text-gray-800">€14.00</span>
-                    </div>
-                </div>
-                <div class="menu-card" data-aos="fade-up" data-aos-delay="300">
-                    <img src="https://images.pexels.com/photos/1055069/pexels-photo-1055069.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Gambas ao Alho">
-                    <div class="menu-card-content">
-                        <h3 class="playfair text-2xl font-bold text-gray-800 mb-2" data-i18n="menuApp3Title">Gambas ao Alho</h3>
-                        <p class="text-gray-600 mb-4" data-i18n="menuApp3Desc">King prawns sautéed in a sizzling garlic, chili, and white wine butter.</p>
-                        <span class="font-bold text-lg text-gray-800">€15.50</span>
+
+                    <!-- Dish 2: Seasonal Garden Salad (TRANSLATABLE) -->
+                    <div class="flex justify-between items-start border-b border-gray-100 pb-4">
+                        <div>
+                            <h3 class="playfair text-xl font-semibold text-gray-800" data-i18n="dishSaladTitle">Seasonal Garden Salad</h3>
+                            <p class="text-gray-500 max-w-lg" data-i18n="dishSaladDesc">Mixed greens, toasted nuts, goat cheese, and a honey-mustard vinaigrette.</p>
+                        </div>
+                        <span class="text-xl font-bold text-[#d1a150] ml-4">€12</span>
                     </div>
                 </div>
             </div>
+
+            <!-- Main Courses Section -->
+            <div class="mb-16" data-aos="fade-up">
+                <h2 class="playfair text-4xl font-bold text-[#d1a150] mb-10 text-center border-b-2 border-gray-200 pb-4" data-i18n="menuSectionMains">Main Courses</h2>
+                
+                <div class="space-y-10">
+                    <!-- Dish 3: Bacalhau à Brás (Native name kept, desc translated) -->
+                    <div class="flex justify-between items-start border-b border-gray-100 pb-4">
+                        <div>
+                            <h3 class="playfair text-xl font-semibold text-gray-800" data-i18n="dishCodTitle">Bacalhau à Brás</h3>
+                            <p class="text-gray-500 max-w-lg" data-i18n="dishCodDesc">Shredded codfish, onions, and thinly chopped fried potatoes, all bound with scrambled eggs.</p>
+                        </div>
+                        <span class="text-xl font-bold text-[#d1a150] ml-4">€24</span>
+                    </div>
+
+                    <!-- Dish 4: Grilled Salmon Filet (TRANSLATABLE) -->
+                    <div class="flex justify-between items-start border-b border-gray-100 pb-4">
+                        <div>
+                            <h3 class="playfair text-xl font-semibold text-gray-800" data-i18n="dishSalmonTitle">Grilled Salmon Filet</h3>
+                            <p class="text-gray-500 max-w-lg" data-i18n="dishSalmonDesc">Perfectly grilled salmon served with asparagus and lemon butter sauce.</p>
+                        </div>
+                        <span class="text-xl font-bold text-[#d1a150] ml-4">€22</span>
+                    </div>
+
+                    <!-- Dish 5: Portuguese Steak (TRANSLATABLE) -->
+                    <div class="flex justify-between items-start border-b border-gray-100 pb-4">
+                        <div>
+                            <h3 class="playfair text-xl font-semibold text-gray-800" data-i18n="dishSteakTitle">Portuguese Steak</h3>
+                            <p class="text-gray-500 max-w-lg" data-i18n="dishSteakDesc">Tender sirloin steak with a creamy port wine sauce and potato crisps.</p>
+                        </div>
+                        <span class="text-xl font-bold text-[#d1a150] ml-4">€28</span>
+                    </div>
+
+                    <!-- Dish 6: Mushroom Risotto (TRANSLATABLE) -->
+                    <div class="flex justify-between items-start border-b border-gray-100 pb-4">
+                        <div>
+                            <h3 class="playfair text-xl font-semibold text-gray-800" data-i18n="dishRisottoTitle">Mushroom Risotto</h3>
+                            <p class="text-gray-500 max-w-lg" data-i18n="dishRisottoDesc">Creamy Arborio rice with wild mushrooms, truffle oil, and Parmesan cheese.</p>
+                        </div>
+                        <span class="text-xl font-bold text-[#d1a150] ml-4">€19</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Desserts Section -->
+            <div data-aos="fade-up">
+                <h2 class="playfair text-4xl font-bold text-[#d1a150] mb-10 text-center border-b-2 border-gray-200 pb-4" data-i18n="menuSectionDesserts">Desserts</h2>
+                
+                <div class="space-y-10">
+                    <!-- Dish 7: Pastel de Nata (Native name kept, desc translated) -->
+                    <div class="flex justify-between items-start border-b border-gray-100 pb-4">
+                        <div>
+                            <h3 class="playfair text-xl font-semibold text-gray-800" data-i18n="dishNataTitle">Pastel de Nata</h3>
+                            <p class="text-gray-500 max-w-lg" data-i18n="dishNataDesc">The classic Portuguese custard tart, served warm with cinnamon.</p>
+                        </div>
+                        <span class="text-xl font-bold text-[#d1a150] ml-4">€5</span>
+                    </div>
+
+                    <!-- Dish 8: Mousse au Chocolat (Native name kept, desc translated) -->
+                    <div class="flex justify-between items-start border-b border-gray-100 pb-4">
+                        <div>
+                            <h3 class="playfair text-xl font-semibold text-gray-800" data-i18n="dishMousseTitle">Mousse au Chocolat</h3>
+                            <p class="text-gray-500 max-w-lg" data-i18n="dishMousseDesc">Rich, dark chocolate mousse, light and intensely flavored.</p>
+                        </div>
+                        <span class="text-xl font-bold text-[#d1a150] ml-4">€9</span>
+                    </div>
+
+                    <!-- Dish 9: Seasonal Cheesecake (TRANSLATABLE) -->
+                    <div class="flex justify-between items-start border-b border-gray-100 pb-4">
+                        <div>
+                            <h3 class="playfair text-xl font-semibold text-gray-800" data-i18n="dishCheesecakeTitle">Seasonal Cheesecake</h3>
+                            <p class="text-gray-500 max-w-lg" data-i18n="dishCheesecakeDesc">Creamy cheesecake with a digestive biscuit base and seasonal fruit topping.</p>
+                        </div>
+                        <span class="text-xl font-bold text-[#d1a150] ml-4">€8</span>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </section>
 
-    <!-- Mains Section -->
-    <section class="py-20 bg-white">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16" data-aos="fade-up">
-                <h2 class="playfair text-4xl font-bold text-gray-800 mb-2" data-i18n="menuMainsTitle">Main Courses (Pratos Principais)</h2>
-                <div class="w-20 h-1 bg-[#d1a150] mx-auto"></div>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
-                <div class="menu-card" data-aos="fade-up" data-aos-delay="100">
-                    <img src="https://images.pexels.com/photos/10153208/pexels-photo-10153208.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Bacalhau à Brás">
-                    <div class="menu-card-content">
-                        <h3 class="playfair text-2xl font-bold text-gray-800 mb-2" data-i18n="menuMain1Title">Bacalhau à Brás</h3>
-                        <p class="text-gray-600 mb-4" data-i18n="menuMain1Desc">Flaked codfish, straw potatoes, onions, and eggs, perfected.</p>
-                        <span class="font-bold text-lg text-gray-800">€22.00</span>
-                    </div>
-                </div>
-                <div class="menu-card" data-aos="fade-up" data-aos-delay="200">
-                    <img src="https://images.pexels.com/photos/5930262/pexels-photo-5930262.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Polvo à Lagareiro">
-                    <div class="menu-card-content">
-                        <h3 class="playfair text-2xl font-bold text-gray-800 mb-2" data-i18n="menuMain2Title">Polvo à Lagareiro</h3>
-                        <p class="text-gray-600 mb-4" data-i18n="menuMain2Desc">Tender grilled octopus, roasted potatoes, and a rich garlic-infused olive oil.</p>
-                        <span class="font-bold text-lg text-gray-800">€26.50</span>
-                    </div>
-                </div>
-                <div class="menu-card" data-aos="fade-up" data-aos-delay="300">
-                    <img src="https://images.pexels.com/photos/3186654/pexels-photo-3186654.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Bife à Portuguesa">
-                    <div class="menu-card-content">
-                        <h3 class="playfair text-2xl font-bold text-gray-800 mb-2" data-i18n="menuMain3Title">Bife à Portuguesa</h3>
-                        <p class="text-gray-600 mb-4" data-i18n="menuMain3Desc">Pan-seared steak in a garlic sauce, topped with a fried egg and served with chips.</p>
-                        <span class="font-bold text-lg text-gray-800">€24.00</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Desserts Section -->
-    <section class="py-20">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16" data-aos="fade-up">
-                <h2 class="playfair text-4xl font-bold text-gray-800 mb-2" data-i18n="menuDessertsTitle">Desserts (Sobremesas)</h2>
-                <div class="w-20 h-1 bg-[#d1a150] mx-auto"></div>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
-                <div class="menu-card" data-aos="fade-up" data-aos-delay="100">
-                    <img src="https://images.pexels.com/photos/4109913/pexels-photo-4109913.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Mousse de Chocolate">
-                    <div class="menu-card-content">
-                        <h3 class="playfair text-2xl font-bold text-gray-800 mb-2" data-i18n="menuDessert1Title">Mousse de Chocolate</h3>
-                        <p class="text-gray-600 mb-4" data-i18n="menuDessert1Desc">A rich, decadent chocolate mousse with a hint of sea salt and premium olive oil.</p>
-                        <span class="font-bold text-lg text-gray-800">€8.00</span>
-                    </div>
-                </div>
-                <div class="menu-card" data-aos="fade-up" data-aos-delay="200">
-                    <img src="https://images.pexels.com/photos/1362386/pexels-photo-1362386.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Pastel de Nata">
-                    <div class="menu-card-content">
-                        <h3 class="playfair text-2xl font-bold text-gray-800 mb-2" data-i18n="menuDessert2Title">Pastel de Nata</h3>
-                        <p class="text-gray-600 mb-4" data-i18n="menuDessert2Desc">Our house-made custard tart, served warm with cinnamon.</p>
-                        <span class="font-bold text-lg text-gray-800">€4.50</span>
-                    </div>
-                </div>
-                <div class="menu-card" data-aos="fade-up" data-aos-delay="300">
-                    <img src="https://images.pexels.com/photos/159882/pexels-photo-159882.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Arroz Doce">
-                    <div class="menu-card-content">
-                        <h3 class="playfair text-2xl font-bold text-gray-800 mb-2" data-i18n="menuDessert3Title">Arroz Doce</h3>
-                        <p class="text-gray-600 mb-4" data-i18n="menuDessert3Desc">Traditional creamy rice pudding with a delicate lemon and cinnamon infusion.</p>
-                        <span class="font-bold text-lg text-gray-800">€7.00</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Rodapé -->
+    <!-- Footer Section -->
     <footer class="bg-gray-900 text-white py-16">
         <div class="container mx-auto px-6">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
@@ -269,7 +262,7 @@
         </div>
     </footer>
 
-    <!-- Load translation dictionary first -->
+    <!-- Scripts -->
     <script src="lang.js"></script>
     <script>
         AOS.init({
@@ -286,7 +279,6 @@
         });
 
         // --- Language Switcher Logic ---
-        
         const getLanguage = () => {
             let lang = localStorage.getItem('lang');
             if (!lang) {
@@ -296,20 +288,18 @@
             return lang;
         };
 
-        // Pass translations object as an argument
-        const setLanguage = (lang, translations) => {
+        const setLanguage = (lang) => {
             localStorage.setItem('lang', lang);
-            translatePage(lang, translations);
+            translatePage(lang);
             updateSwitcherUI(lang);
         };
 
-        // Pass translations object as an argument
-        const translatePage = (lang, translations) => {
-            // Check if translations object itself is valid
-            if (!translations || !translations[lang]) {
+        const translatePage = (lang) => {
+            if (typeof window.translations === 'undefined' || !window.translations[lang]) {
                 console.error(`Translations for language "${lang}" not found or translations object is missing.`);
                 return;
             }
+            const translations = window.translations;
 
             document.querySelectorAll('[data-i18n]').forEach(element => {
                 const key = element.getAttribute('data-i18n');
@@ -317,6 +307,15 @@
                     element.innerHTML = translations[lang][key];
                 }
             });
+            
+            // Handle placeholders specifically as innerHTML won't work for them
+            document.querySelectorAll('[placeholder]').forEach(element => {
+                const placeholderKey = element.getAttribute('data-i18n-placeholder');
+                if (placeholderKey && translations[lang][placeholderKey]) {
+                    element.placeholder = translations[lang][placeholderKey];
+                }
+            });
+
             const titleElement = document.querySelector('title[data-i18n]');
             if (titleElement) {
                 const titleKey = titleElement.getAttribute('data-i18n');
@@ -338,24 +337,18 @@
         };
 
         document.addEventListener('DOMContentLoaded', () => {
-            // Robust check: Ensure lang.js is loaded and window.translations is populated
-            if (typeof window.translations === 'undefined' || !window.translations) {
-                console.error('CRITICAL: lang.js file not found or failed to load before DOMContentLoaded. Translations will not work.');
-                return; // Stop execution to prevent errors
+            if (typeof window.translations === 'undefined') {
+                console.error('CRITICAL: lang.js file not found or failed to load. Translations will not work.');
+                return;
             }
 
-            // Assign translations *after* checking
-            const translations = window.translations;
             const currentLang = getLanguage();
-            
-            translatePage(currentLang, translations);
+            translatePage(currentLang);
             updateSwitcherUI(currentLang);
 
-            // Pass translations to the click handlers
-            document.getElementById('lang-en').addEventListener('click', () => setLanguage('en', translations));
-            document.getElementById('lang-pt').addEventListener('click', () => setLanguage('pt', translations));
+            document.getElementById('lang-en').addEventListener('click', () => setLanguage('en'));
+            document.getElementById('lang-pt').addEventListener('click', () => setLanguage('pt'));
         });
     </script>
 </body>
 </html>
-
