@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="menuPageTitle">Our Menu | Restaurante Sabor</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #fdfaf6;
+            color: #333;
+        }
+        
+        .playfair {
+            font-family: 'Playfair Display', serif;
+        }
+
+        .transition-all {
+            transition: all 0.3s ease-in-out;
+        }
+
+        .btn-primary {
+            @apply bg-[#d1a150] text-white font-semibold py-3 px-8 rounded-lg transition-all hover:bg-[#b88f48] shadow-md hover:shadow-lg;
+        }
+
+        .nav-link {
+            @apply text-gray-700 hover:text-[#d1a150] transition-all;
+        }
+
+        .nav-link-active {
+            @apply text-[#d1a150] font-semibold;
+        }
+
+        .footer-link {
+            @apply text-gray-400 hover:text-white transition-all;
+        }
+
+        /* Language Switcher Styles */
+        .lang-switcher {
+            opacity: 0.6;
+            transition: all 0.2s ease-in-out;
+            cursor: pointer;
+        }
+        .lang-switcher.active {
+            opacity: 1;
+            transform: scale(1.1);
+            border-radius: 2px;
+            box-shadow: 0 0 6px rgba(209, 161, 80, 0.5);
+        }
+        .lang-switcher:hover {
+            opacity: 1;
+        }
+
+        .menu-card {
+            @apply bg-white rounded-lg overflow-hidden shadow-lg transition-all hover:shadow-2xl;
+        }
+
+        .menu-card img {
+            @apply w-full h-64 object-cover;
+        }
+
+        .menu-card-content {
+            @apply p-6;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Navegação -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="text-3xl font-bold playfair text-gray-800">Sabor</div>
+                
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="nav-link" data-i18n="navHome">Home</a>
+                    <a href="menu.html" class="nav-link-active" data-i18n="navMenu">Menu</a>
+                    <a href="about.html" class="nav-link" data-i18n="navAbout">About Us</a>
+                    <a href="contact.html" class="nav-link" data-i18n="navContact">Contact</a>
+                    
+                    <!-- Language Switcher -->
+                    <div class="flex items-center space-x-3 pl-4">
+                        <button id="lang-en" class="lang-switcher" data-lang="en">
+                            <img src="https://flagcdn.com/gb.svg" alt="English" class="w-6 h-auto rounded-sm">
+                        </button>
+                        <button id="lang-pt" class="lang-switcher" data-lang="pt">
+                            <img src="https://flagcdn.com/pt.svg" alt="Português" class="w-6 h-auto rounded-sm">
+                        </button>
+                    </div>
+                    
+                    <a href="contact.html" class="btn-primary" data-i18n="navReserve">Book a Table</a>
+                </div>
+                
+                <button class="md:hidden focus:outline-none" id="menu-toggle">
+                    <i data-feather="menu" class="text-gray-800 w-6 h-6"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Menu Header -->
+    <section class="py-24 bg-gray-800 text-white" data-aos="fade-down">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="playfair text-5xl md:text-6xl font-bold mb-4" data-i18n="menuHeaderTitle">Our Menu</h1>
+            <p class="text-xl max-w-2xl mx-auto" data-i18n="menuHeaderSubtitle">Crafted with passion, inspired by the sea and land</p>
+        </div>
+    </section>
+
+    <!-- Appetizers Section -->
+    <section class="py-20">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="playfair text-4xl font-bold text-gray-800 mb-2" data-i18n="menuAppetizersTitle">Appetizers (Entradas)</h2>
+                <div class="w-20 h-1 bg-[#d1a150] mx-auto"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                <div class="menu-card" data-aos="fade-up" data-aos-delay="100">
+                    <img src="https://images.pexels.com/photos/128421/pexels-photo-128421.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Caldo Verde">
+                    <div class="menu-card-content">
+                        <h3 class="playfair text-2xl font-bold text-gray-800 mb-2" data-i18n="menuApp1Title">Caldo Verde</h3>
+                        <p class="text-gray-600 mb-4" data-i18n="menuApp1Desc">Traditional green soup with potato, collard greens, and a slice of chouriço.</p>
+                        <span class="font-bold text-lg text-gray-800">€7.50</span>
+                    </div>
+                </div>
+                <div class="menu-card" data-aos="fade-up" data-aos-delay="200">
+                    <img src="https://images.pexels.com/photos/5929381/pexels-photo-5929381.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Amêijoas à Bulhão Pato">
+                    <div class="menu-card-content">
+                        <h3 class="playfair text-2xl font-bold text-gray-800 mb-2" data-i18n="menuApp2Title">Amêijoas à Bulhão Pato</h3>
+                        <p class="text-gray-600 mb-4" data-i18n="menuApp2Desc">Fresh clams cooked in a white wine, garlic, and cilantro sauce.</p>
+                        <span class="font-bold text-lg text-gray-800">€14.00</span>
+                    </div>
+                </div>
+                <div class="menu-card" data-aos="fade-up" data-aos-delay="300">
+                    <img src="https://images.pexels.com/photos/1055069/pexels-photo-1055069.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Gambas ao Alho">
+                    <div class="menu-card-content">
+                        <h3 class="playfair text-2xl font-bold text-gray-800 mb-2" data-i18n="menuApp3Title">Gambas ao Alho</h3>
+                        <p class="text-gray-600 mb-4" data-i18n="menuApp3Desc">King prawns sautéed in a sizzling garlic, chili, and white wine butter.</p>
+                        <span class="font-bold text-lg text-gray-800">€15.50</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mains Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="playfair text-4xl font-bold text-gray-800 mb-2" data-i18n="menuMainsTitle">Main Courses (Pratos Principais)</h2>
+                <div class="w-20 h-1 bg-[#d1a150] mx-auto"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                <div class="menu-card" data-aos="fade-up" data-aos-delay="100">
+                    <img src="https://images.pexels.com/photos/10153208/pexels-photo-10153208.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Bacalhau à Brás">
+                    <div class="menu-card-content">
+                        <h3 class="playfair text-2xl font-bold text-gray-800 mb-2" data-i18n="menuMain1Title">Bacalhau à Brás</h3>
+                        <p class="text-gray-600 mb-4" data-i18n="menuMain1Desc">Flaked codfish, straw potatoes, onions, and eggs, perfected.</p>
+                        <span class="font-bold text-lg text-gray-800">€22.00</span>
+                    </div>
+                </div>
+                <div class="menu-card" data-aos="fade-up" data-aos-delay="200">
+                    <img src="https://images.pexels.com/photos/5930262/pexels-photo-5930262.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Polvo à Lagareiro">
+                    <div class="menu-card-content">
+                        <h3 class="playfair text-2xl font-bold text-gray-800 mb-2" data-i18n="menuMain2Title">Polvo à Lagareiro</h3>
+                        <p class="text-gray-600 mb-4" data-i18n="menuMain2Desc">Tender grilled octopus, roasted potatoes, and a rich garlic-infused olive oil.</p>
+                        <span class="font-bold text-lg text-gray-800">€26.50</span>
+                    </div>
+                </div>
+                <div class="menu-card" data-aos="fade-up" data-aos-delay="300">
+                    <img src="https://images.pexels.com/photos/3186654/pexels-photo-3186654.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Bife à Portuguesa">
+                    <div class="menu-card-content">
+                        <h3 class="playfair text-2xl font-bold text-gray-800 mb-2" data-i18n="menuMain3Title">Bife à Portuguesa</h3>
+                        <p class="text-gray-600 mb-4" data-i18n="menuMain3Desc">Pan-seared steak in a garlic sauce, topped with a fried egg and served with chips.</p>
+                        <span class="font-bold text-lg text-gray-800">€24.00</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Desserts Section -->
+    <section class="py-20">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="playfair text-4xl font-bold text-gray-800 mb-2" data-i18n="menuDessertsTitle">Desserts (Sobremesas)</h2>
+                <div class="w-20 h-1 bg-[#d1a150] mx-auto"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                <div class="menu-card" data-aos="fade-up" data-aos-delay="100">
+                    <img src="https://images.pexels.com/photos/4109913/pexels-photo-4109913.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Mousse de Chocolate">
+                    <div class="menu-card-content">
+                        <h3 class="playfair text-2xl font-bold text-gray-800 mb-2" data-i18n="menuDessert1Title">Mousse de Chocolate</h3>
+                        <p class="text-gray-600 mb-4" data-i18n="menuDessert1Desc">A rich, decadent chocolate mousse with a hint of sea salt and premium olive oil.</p>
+                        <span class="font-bold text-lg text-gray-800">€8.00</span>
+                    </div>
+                </div>
+                <div class="menu-card" data-aos="fade-up" data-aos-delay="200">
+                    <img src="https://images.pexels.com/photos/1362386/pexels-photo-1362386.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Pastel de Nata">
+                    <div class="menu-card-content">
+                        <h3 class="playfair text-2xl font-bold text-gray-800 mb-2" data-i18n="menuDessert2Title">Pastel de Nata</h3>
+                        <p class="text-gray-600 mb-4" data-i18n="menuDessert2Desc">Our house-made custard tart, served warm with cinnamon.</p>
+                        <span class="font-bold text-lg text-gray-800">€4.50</span>
+                    </div>
+                </div>
+                <div class="menu-card" data-aos="fade-up" data-aos-delay="300">
+                    <img src="https://images.pexels.com/photos/159882/pexels-photo-159882.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Arroz Doce">
+                    <div class="menu-card-content">
+                        <h3 class="playfair text-2xl font-bold text-gray-800 mb-2" data-i18n="menuDessert3Title">Arroz Doce</h3>
+                        <p class="text-gray-600 mb-4" data-i18n="menuDessert3Desc">Traditional creamy rice pudding with a delicate lemon and cinnamon infusion.</p>
+                        <span class="font-bold text-lg text-gray-800">€7.00</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer class="bg-gray-900 text-white py-16">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+                <div class="mb-8 md:mb-0">
+                    <h3 class="playfair text-2xl font-bold mb-4">Sabor</h3>
+                    <p class="text-gray-400" data-i18n="footerDesc">Modern cuisine inspired by the timeless flavours of Portugal.</p>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold text-lg mb-4" data-i18n="footerNavTitle">Navigation</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="footer-link" data-i18n="navHome">Home</a></li>
+                        <li><a href="menu.html" class="footer-link" data-i18n="navMenu">Menu</a></li>
+                        <li><a href="about.html" class="footer-link" data-i18n="navAbout">About Us</a></li>
+                        <li><a href="contact.html" class="footer-link" data-i18n="navContact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold text-lg mb-4" data-i18n="footerHoursTitle">Opening Hours</h4>
+                    <ul class="text-gray-400 space-y-2">
+                        <li data-i18n="footerHours1">Tues - Fri: 18:00 - 23:00</li>
+                        <li data-i18n="footerHours2">Sat: 12:00 - 23:30</li>
+                        <li data-i18n="footerHours3">Sun: 12:00 - 22:00</li>
+                        <li>Mon: Closed</li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold text-lg mb-4" data-i18n="footerFollowTitle">Follow Us</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white"><i data-feather="facebook" class="w-6 h-6"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i data-feather="instagram" class="w-6 h-6"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i data-feather="twitter" class="w-6 h-6"></i></a>
+                    </div>
+                    <p class="text-gray-400 mt-4">Rua do Sabor, 123<br>Lisbon, Portugal</p>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+                <p data-i18n="footerCopyright">&copy; 2025 Restaurante Sabor. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Load translation dictionary first -->
+    <script src="lang.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+        feather.replace();
+
+        // Menu mobile
+        document.getElementById("menu-toggle").addEventListener("click", function() {
+            const nav = document.querySelector("nav .md\\:flex");
+            nav.classList.toggle("hidden");
+        });
+
+        // --- Language Switcher Logic ---
+        
+        const getLanguage = () => {
+            let lang = localStorage.getItem('lang');
+            if (!lang) {
+                lang = 'en';
+                localStorage.setItem('lang', lang);
+            }
+            return lang;
+        };
+
+        // Pass translations object as an argument
+        const setLanguage = (lang, translations) => {
+            localStorage.setItem('lang', lang);
+            translatePage(lang, translations);
+            updateSwitcherUI(lang);
+        };
+
+        // Pass translations object as an argument
+        const translatePage = (lang, translations) => {
+            // Check if translations object itself is valid
+            if (!translations || !translations[lang]) {
+                console.error(`Translations for language "${lang}" not found or translations object is missing.`);
+                return;
+            }
+
+            document.querySelectorAll('[data-i18n]').forEach(element => {
+                const key = element.getAttribute('data-i18n');
+                if (translations[lang][key]) {
+                    element.innerHTML = translations[lang][key];
+                }
+            });
+            const titleElement = document.querySelector('title[data-i18n]');
+            if (titleElement) {
+                const titleKey = titleElement.getAttribute('data-i18n');
+                if (translations[lang][titleKey]) {
+                    document.title = translations[lang][titleKey];
+                }
+            }
+            document.documentElement.lang = lang;
+        };
+
+        const updateSwitcherUI = (lang) => {
+            document.querySelectorAll('.lang-switcher').forEach(switcher => {
+                if (switcher.getAttribute('data-lang') === lang) {
+                    switcher.classList.add('active');
+                } else {
+                    switcher.classList.remove('active');
+                }
+            });
+        };
+
+        document.addEventListener('DOMContentLoaded', () => {
+            // Robust check: Ensure lang.js is loaded and window.translations is populated
+            if (typeof window.translations === 'undefined' || !window.translations) {
+                console.error('CRITICAL: lang.js file not found or failed to load before DOMContentLoaded. Translations will not work.');
+                return; // Stop execution to prevent errors
+            }
+
+            // Assign translations *after* checking
+            const translations = window.translations;
+            const currentLang = getLanguage();
+            
+            translatePage(currentLang, translations);
+            updateSwitcherUI(currentLang);
+
+            // Pass translations to the click handlers
+            document.getElementById('lang-en').addEventListener('click', () => setLanguage('en', translations));
+            document.getElementById('lang-pt').addEventListener('click', () => setLanguage('pt', translations));
+        });
+    </script>
+</body>
+</html>
+
